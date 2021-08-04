@@ -1,0 +1,19 @@
+digraph "register8" {
+label="register8";
+rankdir="LR";
+remincross=true;
+n3 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="din", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="dout", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="ld", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="reset", color="black", fontcolor="black" ];
+c12 [ shape=record, label="{{<p8> ARST|<p9> CLK|<p10> D}|$7\n$adff|{<p11> Q}}" ];
+c17 [ shape=record, label="{{<p13> A|<p14> B|<p15> S}|$5\n$mux|{<p16> Y}}" ];
+c17:p16:e -> c12:p10:w [color="black", style="setlinewidth(3)", label=""];
+n3:e -> c12:p9:w [color="black", label=""];
+n4:e -> c17:p14:w [color="black", style="setlinewidth(3)", label=""];
+c12:p11:e -> n5:w [color="black", style="setlinewidth(3)", label=""];
+n5:e -> c17:p13:w [color="black", style="setlinewidth(3)", label=""];
+n6:e -> c17:p15:w [color="black", label=""];
+n7:e -> c12:p8:w [color="black", label=""];
+}

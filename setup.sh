@@ -5,5 +5,5 @@
 # Usage: $ source setup.sh
 ##########################################################################
 
-export IVERILOG_PATH=/usr/bin
+export IVERILOG_PATH=/usr/local/bin
 export YOSYS_PATH=/usr/bin
